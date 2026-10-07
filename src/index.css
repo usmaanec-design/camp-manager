@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-brand-black: #111111;
+    --color-brand-dark: #171717;
+    --color-brand-charcoal: #1C1C1C;
+    --color-brand-surface: #242424;
+    --color-brand-orange: #F97316;
+    --color-brand-orange-hover: #EA580C;
+  }
+
+  body {
+    @apply bg-neutral-100 text-neutral-900 min-h-screen font-sans;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  [dir="rtl"] {
+    font-family: 'Noto Sans Arabic', 'Inter', system-ui, sans-serif;
+  }
+}
+
+/* Custom subtle scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c7c7c7;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Focus outline helper */
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-1;
+}
